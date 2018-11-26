@@ -1,7 +1,7 @@
 Package.describe({
   name: "perak:auth0-oauth",
   summary: "Auth0 OAuth flow",
-  version: "1.0.0",
+  version: "1.0.1",
   git: "https://github.com/perak/meteor-auth0-oauth.git"
 });
 

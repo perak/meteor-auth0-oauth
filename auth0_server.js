@@ -50,7 +50,7 @@ var getTokenResponse = function (query) {
   try {
     // Request an access token
     responseContent = HTTP.post(
-      `https://${config.domain}/oauth/token`, {
+      'https://' + config.domain + '/oauth/token', {
         params: {
           client_id: config.clientId,
           redirect_uri: OAuth._redirectUri('auth0', config),
@@ -80,9 +80,9 @@ var getIdentity = function (accessToken) {
     throw new ServiceConfiguration.ConfigError();
 
   try {
-    return HTTP.get(`https://${config.domain}/userinfo`, {
+    return HTTP.get('https://' + config.domain + '/userinfo', {
         headers: {
-          Authorization: `Bearer ${accessToken}`
+          Authorization: 'Bearer ' + accessToken
         }
       }).data;
   } catch (err) {

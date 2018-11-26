@@ -31,7 +31,7 @@ Auth0.requestCredential = function (options, credentialRequestCompleteCallback) 
   var loginStyle = OAuth._loginStyle('auth0', config, options);
 
   var loginUrl =
-        `https://${config.domain}/authorize?` + config.clientId +
+        'https://' + config.domain + '/authorize?' + config.clientId +
         '&redirect_uri=' + OAuth._redirectUri('auth0', config) +
         '&display=' + display + 
         '&scope=' + scope + 
